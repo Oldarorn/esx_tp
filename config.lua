@@ -1,7 +1,10 @@
-Config                            = {}
-Config.DrawDistance               = 100.0
-Config.MarkerColor                = { r = 255, g = 210, b = 0 }
-Config.MarkerSize                 = { x = 1.5, y = 1.5, z = 1.0 }
+Config              = {}
+Config.DrawDistance = 100.0
+
+Config.Marker = {
+	r = 255, g = 210, b = 0,    -- marker color
+	x = 1.5, y = 1.5, z = 1.0   -- marker size
+}
 
 Config.Zones = {
 
@@ -10,23 +13,23 @@ Config.Zones = {
     -- HUMANE LABS COOLING START --
 
     HumaneLabEntrance = { -- Entrance
-        Pos	= { x = 3540.5961914062, y = 3675.3364257812, z = 27.121141433716 },
-        Type = -1
+        Pos	= vector3(3540.5, 3675.3, 27.1), -- marker coords
+        Type = -1 -- Marker type
     },
 
     HumaneLabExit = { -- Exit
-        Pos	= { x = 3540.3425292968, y = 3674.810546875, z = 19.991790771484 },
-        Type = -1
+        Pos	= vector3(3540.3, 3674.8, 19.9), -- marker coords
+        Type = -1 -- Marker type
     },
 
     HumaneLabIn = { -- Inside
-        Pos	= { x = 3539.7551269532, y = 3671.0168457032, z = 20.99178314209 },
-        Type = -1
+        Pos	= vector3(3539.7, 3671.0, 20.9), -- marker coords
+        Type = -1 -- Marker type
     },
 
     HumaneLabOut = { -- Outside
-        Pos	= { x = 3540.0947265625, y = 3671.203125, z = 28.121160507202 },
-        Type = -1
+        Pos	= vector3(3540.0, 3671.2, 28.1), -- marker coords
+        Type = -1 -- Marker type
     },
 
     -- HUMANE LABS COOLING STOP --

@@ -50,9 +50,10 @@ Citizen.CreateThread(function()
         Citizen.Wait(0)
 
         local coords = GetEntityCoords(GetPlayerPed(-1))
+        
         for k,v in pairs(Config.Zones) do
-            if(v.Type ~= -1 and GetDistanceBetweenCoords(coords, v.Pos.x, v.Pos.y, v.Pos.z, true) < Config.DrawDistance) then
-                    DrawMarker(v.Type, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, Config.MarkerSize.x, Config.MarkerSize.y, Config.MarkerSize.z, Config.MarkerColor.r, Config.MarkerColor.g, Config.MarkerColor.b, 100, false, true, 2, false, false, false, false)
+            if(v.Type ~= -1 and GetDistanceBetweenCoords(coords, v.Pos, true) < Config.DrawDistance) then
+                DrawMarker(v.Type, v.Pos, 0.0, 0.0, 0.0, 0, 0.0, 0.0, Config.Marker.x, Config.Marker.y, Config.Marker.z, Config.Marker.r, Config.Marker.g, Config.Marker.b, 100, false, true, 2, false, false, false, false)
             end
         end
     end
@@ -66,14 +67,16 @@ Citizen.CreateThread(function()
         local coords      = GetEntityCoords(GetPlayerPed(-1))
         local isInMarker  = false
         local currentZone = nil
+
         for k,v in pairs(Config.Zones) do
             if k ~= 'HumaneLabIn' and k~= 'HumaneLabOut' then
-                if(GetDistanceBetweenCoords(coords, v.Pos.x, v.Pos.y, v.Pos.z, true) < Config.MarkerSize.x) then
+                if(GetDistanceBetweenCoords(coords, v.Pos, true) < Config.Marker.x) then
                     isInMarker  = true
                     currentZone = k
                 end
             end
         end
+
         if isInMarker and not HasAlreadyEnteredMarker then
             HasAlreadyEnteredMarker = true
             LastZone                = currentZone
