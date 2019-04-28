@@ -8,8 +8,6 @@ Config.Marker = {
 
 Config.Zones = {
 
-    -- WEED START --
-
     -- HUMANE LABS COOLING START --
 
     HumaneLabEntrance = { -- Entrance
@@ -22,12 +20,12 @@ Config.Zones = {
         Type = -1 -- Marker type
     },
 
-    HumaneLabIn = { -- Inside
+    HumaneLabIn = { -- Spawn Inside
         Pos	= vector3(3539.7, 3671.0, 20.9), -- marker coords
         Type = -1 -- Marker type
     },
 
-    HumaneLabOut = { -- Outside
+    HumaneLabOut = { -- Spawn Outside
         Pos	= vector3(3540.0, 3671.2, 28.1), -- marker coords
         Type = -1 -- Marker type
     },
