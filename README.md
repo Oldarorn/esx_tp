@@ -2,8 +2,6 @@
 
 # [EN]
 
-## I WON'T GIVE ANY SUPPORT. You just have to copy/paste each line from the example.
-
 ###### REQUIREMENTS
 
    - es_extended => https://github.com/ESX-Org/es_extended
@@ -19,11 +17,9 @@
 ###### FEATURES
 
 - You have to set 4 points in config.lua (1 entry point, 1 spawnIn point, 1 exit point and 1 spawnOut point)
-- It allows you to enter inside closed zones (like the example in Humane Labs) like if you were using a door or an elevator
+- It allows you to enter inside closed zones (look at the example in Humane Labs) like if you were using a door or an elevator.
 
 # [FR]
-
-## AUCUN SUPPORT NE SERA FAIT. Vous n'avez qu'à copier/coller la plupart des lignes présentes grâce à l'exemple.
 
 ###### PRÉ-REQUIS
 
